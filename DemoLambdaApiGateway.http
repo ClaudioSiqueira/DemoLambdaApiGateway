@@ -1,0 +1,6 @@
+@DemoLambdaApiGateway_HostAddress = http://localhost:5101
+
+GET {{DemoLambdaApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
