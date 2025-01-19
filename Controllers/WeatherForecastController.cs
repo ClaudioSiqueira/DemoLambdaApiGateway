@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DemoLambdaApiGateway.Controllers;
 [ApiController]
-[Route("[controller]")]
+[Route("weatherForecast")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -22,6 +22,7 @@ public class WeatherForecastController : ControllerBase
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
+            Type = "Testando api gateway",
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = Random.Shared.Next(-20, 55),
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]

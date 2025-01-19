@@ -2,6 +2,7 @@ namespace DemoLambdaApiGateway;
 
 public class WeatherForecast
 {
+    public string Type { get; set; }
     public DateOnly Date { get; set; }
 
     public int TemperatureC { get; set; }
